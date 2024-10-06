@@ -14,9 +14,6 @@ var ErrJSONUnmarshalError = errors.New("json unmarshal error")
 // ErrXMLUnmarshalError is returned when there is an error unmarshalling XML.
 var ErrXMLUnmarshalError = errors.New("xml unmarshal error")
 
-// ErrYAMLUnmarshalError is returned when there is an error unmarshalling YAML.
-var ErrYAMLUnmarshalError = errors.New("yaml unmarshal error")
-
 // ErrFailedToFetch is returned when there is an error fetching from the URL.
 var ErrFailedToFetch = errors.New("failed to fetch from URL")
 

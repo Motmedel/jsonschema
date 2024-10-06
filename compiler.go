@@ -9,8 +9,6 @@ import (
 	"time"
 
 	"github.com/goccy/go-json"
-
-	"github.com/goccy/go-yaml"
 )
 
 // Compiler is a structure that manages schema compilation and validation.
@@ -173,14 +171,6 @@ func (c *Compiler) setupMediaTypes() {
 		var temp interface{}
 		if err := xml.Unmarshal(data, &temp); err != nil {
 			return nil, ErrXMLUnmarshalError
-		}
-		return temp, nil
-	}
-
-	c.MediaTypes["application/yaml"] = func(data []byte) (interface{}, error) {
-		var temp interface{}
-		if err := yaml.Unmarshal(data, &temp); err != nil {
-			return nil, ErrYAMLUnmarshalError
 		}
 		return temp, nil
 	}
